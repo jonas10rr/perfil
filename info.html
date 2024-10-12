@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <main>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">Dev</div>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="container mt-5 pt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2>IMC e TMB</h2>
+                    <p>O <strong>IMC</strong> (Índice de Massa Corporal) e o <strong>TMB</strong> (Taxa Metabólica Basal) são duas medidas amplamente utilizadas para avaliar o estado nutricional e as necessidades energéticas de uma pessoa.</p>
+
+                    <h2>IMC</h2>
+                    <p>O IMC é um cálculo simples, obtido dividindo o peso (em quilogramas) pela altura ao quadrado (em metros). A fórmula é:</p>
+
+                    <p><strong>IMC = peso (kg) / altura (m)<sup>2</sup></strong></p>
+
+                    <p>O resultado classifica o indivíduo em categorias como baixo peso, peso normal, sobrepeso e obesidade. Ele é útil para uma avaliação inicial da saúde, mas não leva em consideração fatores como composição corporal (músculo vs. gordura) ou distribuição de gordura.</p>
+
+                    <p>As faixas de IMC geralmente usadas são:</p>
+                    <ul>
+                        <li>Abaixo de 18,5: Abaixo do peso</li>
+                        <li>Entre 18,5 e 24,9: Peso normal</li>
+                        <li>Entre 25 e 29,9: Sobrepeso</li>
+                        <li>Acima de 30: Obesidade</li>
+                    </ul>
+
+                    <h2>TMB</h2>
+                    <p>O TMB representa a quantidade mínima de calorias que o corpo precisa para realizar funções vitais, como respiração, circulação sanguínea e manutenção da temperatura corporal, quando em repouso. A fórmula mais comum para calcular o TMB é a Equação de Harris-Benedict, que leva em consideração fatores como idade, sexo, peso e altura.</p>
+
+                    <p>Para homens:</p>
+                    <p><strong>TMB = 88,36 + (13,4 × peso (kg)) + (4,8 × altura (cm)) - (5,7 × idade)</strong></p>
+
+                    <p>Para mulheres:</p>
+                    <p><strong>TMB = 447,6 + (9,2 × peso (kg)) + (3,1 × altura (cm)) - (4,3 × idade)</strong></p>
+
+                    <p>Tanto o IMC quanto o TMB são ferramentas valiosas, mas é importante usá-las em conjunto com outras avaliações para uma visão completa da saúde física.</p>
+                </div>
+            </div>
+
+            <!-- Calculadora de IMC e TMB -->
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-4">
+                    <div id="prj" class="p-3">
+                        <h4>Calculador de IMC e TMB</h4>
+                        <input type="number" id="peso" placeholder="Peso em kg" class="form-control mb-2 bg-transparent" required>
+                        <input type="number" id="altura" placeholder="Altura em metros (ex: 1.70)" class="form-control mb-2 bg-transparent" required>
+                        <input type="number" id="idade" placeholder="Idade em anos" class="form-control mb-2 bg-transparent" required>
+                        <select id="sexo" class="form-select mb-2 bg-transparent" required>
+                            <option value="">Selecione o sexo</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Feminino</option>
+                        </select>
+                        <button class="btn btn-primary w-100" onclick="calcularIMC_TMB()">Calcular IMC e TMB</button>
+                        <div class="mt-3" id="resultado"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="src/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    </main>
+</body>
+</html>
